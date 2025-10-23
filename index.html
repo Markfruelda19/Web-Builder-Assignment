@@ -160,7 +160,7 @@
 
 <!-- Property Gallery Section -->
 <section id="gallery" class="py-20 bg-gray-50" style="font-family: 'Times New Roman', serif;">
-  <div class="container mx-auto px-4 sm:px-6 text-center">
+  <div class="container mx-auto px-6 text-center">
     <h2 class="text-4xl md:text-5xl font-bold mb-12 uppercase text-left md:text-center" data-aos="fade-up">
       Property Gallery
     </h2>
@@ -169,26 +169,21 @@
     <div class="relative overflow-hidden">
       <div id="propertyGallery" class="flex items-center justify-center transition-transform duration-700 ease-in-out">
         <div class="slide opacity-50 scale-90 transition-all duration-500 mx-2 cursor-pointer">
-          <img src="images/pG1.webp" alt="Property 1"
-            class="rounded-xl shadow-lg object-cover w-[70vw] sm:w-[300px] h-[50vh] sm:h-[400px]" />
+          <img src="images/pG1.webp" alt="Property 1" class="rounded-xl shadow-lg object-cover w-[300px] h-[400px]" />
         </div>
         <div class="slide scale-100 opacity-100 mx-4 cursor-pointer">
-          <img src="images/pG2.webp" alt="Property 2"
-            class="rounded-xl shadow-2xl object-cover w-[80vw] sm:w-[400px] h-[60vh] sm:h-[500px]" />
+          <img src="images/pG2.webp" alt="Property 2" class="rounded-xl shadow-2xl object-cover w-[400px] h-[500px]" />
         </div>
         <div class="slide opacity-50 scale-90 transition-all duration-500 mx-2 cursor-pointer">
-          <img src="images/pG3.webp" alt="Property 3"
-            class="rounded-xl shadow-lg object-cover w-[70vw] sm:w-[300px] h-[50vh] sm:h-[400px]" />
+          <img src="images/pG3.webp" alt="Property 3" class="rounded-xl shadow-lg object-cover w-[300px] h-[400px]" />
         </div>
       </div>
 
       <!-- Arrows -->
-      <button id="prev"
-        class="absolute left-2 sm:left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-60 text-white p-2 sm:p-3 rounded-full transition">
+      <button id="prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-60 text-white p-3 rounded-full transition">
         &#10094;
       </button>
-      <button id="next"
-        class="absolute right-2 sm:right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-60 text-white p-2 sm:p-3 rounded-full transition">
+      <button id="next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-60 text-white p-3 rounded-full transition">
         &#10095;
       </button>
     </div>
@@ -200,7 +195,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- Partners Section -->
 <section id="partners" class="py-20 bg-white" style="font-family: 'Times New Roman', serif;">
@@ -242,6 +236,11 @@
   display: inline-flex;
   width: max-content;
   animation: slide 25s linear infinite;
+}
+
+#search form select:hover,
+#search form input:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 </style>
 
@@ -291,6 +290,105 @@
     </div>
   </div>
 </section>
+
+
+<!-- Search Listings Section -->
+<section id="search" class="relative bg-gray-100 py-24 overflow-hidden" style="font-family: 'Times New Roman', serif;">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="images/1.jpg" alt="Dream Home" class="w-full h-full object-cover opacity-80">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 container mx-auto px-6 text-center text-white" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-bold mb-10 uppercase tracking-wide drop-shadow-lg">
+      Find Your Dream Home
+    </h2>
+
+    <!-- Search Box -->
+    <div class="max-w-5xl mx-auto bg-white text-gray-800 rounded-2xl shadow-2xl p-10 md:p-12 backdrop-blur-lg" data-aos="zoom-in" data-aos-delay="200">
+      <h3 class="text-2xl font-semibold mb-8 uppercase text-gray-700 tracking-wider">Search Listings</h3>
+
+      <form class="grid md:grid-cols-3 lg:grid-cols-4 gap-6 text-left">
+        <!-- Location -->
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-600">Location</label>
+          <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-black focus:outline-none">
+            <option>Select City</option>
+            <option>Pahrump</option>
+            <option>Las Vegas</option>
+            <option>Henderson</option>
+          </select>
+        </div>
+
+        <!-- Type -->
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-600">Type</label>
+          <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-black focus:outline-none">
+            <option>All Types</option>
+            <option>House</option>
+            <option>Condo</option>
+            <option>Land</option>
+          </select>
+        </div>
+
+        <!-- Bedrooms -->
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-600">Bedrooms</label>
+          <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-black focus:outline-none">
+            <option>Any</option>
+            <option>1+</option>
+            <option>2+</option>
+            <option>3+</option>
+            <option>4+</option>
+          </select>
+        </div>
+
+        <!-- Bathrooms -->
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-600">Bathrooms</label>
+          <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-black focus:outline-none">
+            <option>Any</option>
+            <option>1+</option>
+            <option>2+</option>
+            <option>3+</option>
+          </select>
+        </div>
+
+        <!-- Min Price -->
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-600">Min Price</label>
+          <input type="number" placeholder="$0" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-black focus:outline-none">
+        </div>
+
+        <!-- Max Price -->
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-600">Max Price</label>
+          <input type="number" placeholder="$1,000,000" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-black focus:outline-none">
+        </div>
+
+        <!-- Sort By -->
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-600">Sort By</label>
+          <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-black focus:outline-none">
+            <option>Newest</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+          </select>
+        </div>
+
+        <!-- Search Button -->
+        <div class="flex items-end">
+          <button type="submit" class="w-full bg-black text-white py-3 rounded-full font-semibold uppercase hover:bg-gray-800 transition-all duration-300 shadow-md">
+            Search Now
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
 
 <!-- Contact Section -->
 <section id="contact" class="py-20 bg-gray-50 text-gray-800" style="font-family: 'Times New Roman', serif;">
